@@ -22,6 +22,8 @@ module PokeBattleManager2
     config.load_defaults 5.1
     config.generators do |g|
       g.template_engine = :slim
+      g.assets false
+      g.helper false
     end
 
     # Settings in config/environments/* take precedence over those specified here.
