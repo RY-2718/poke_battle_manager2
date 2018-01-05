@@ -46,6 +46,7 @@
   <div class="">
     <!-- railsから渡ってくるerrorをここで処理する -->
     <el-alert v-for="error in errors"
+      :key="error"
       type="error"
       :title="error"
       :closable="false"
@@ -70,7 +71,7 @@
               </el-form-item>
 
               <el-form-item label="現在のパスワード（必須）" prop="current_password">
-                <el-input v-model="user.current_password" name="user[current_password]" type="password" autocomplete="off">
+                <el-input v-model="user.current_password" name="user[current_password]" type="password" autoComplete="off">
                 </el-input>
               </el-form-item>
 
@@ -80,12 +81,12 @@
               </el-form-item>
 
               <el-form-item label="新しいパスワード" prop="password">
-                <el-input v-model="user.password" name="user[password]" type="password" autocomplete="off">
+                <el-input v-model="user.password" name="user[password]" type="password" autoComplete="off">
                 </el-input>
               </el-form-item>
 
               <el-form-item label="新しいパスワード（確認）" prop="password_confirmation">
-                <el-input v-model="user.password_confirmation" name="user[password_confirmation]" type="password" autocomplete="off">
+                <el-input v-model="user.password_confirmation" name="user[password_confirmation]" type="password" autoComplete="off">
                 </el-input>
               </el-form-item>
 

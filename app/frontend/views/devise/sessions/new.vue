@@ -34,6 +34,7 @@
   <div class="">
     <!-- railsから渡ってくるerrorをここで処理する -->
     <el-alert v-for="error in errors"
+      :key="error"
       type="error"
       :title="error"
       :closable="false"
