@@ -92,8 +92,5 @@
   .box-card {
     margin-top: 30px;
   }
-  .el-checkbox {
-    margin-bottom: 22px;
-  }
 </style>
 
