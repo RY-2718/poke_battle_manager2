@@ -45,7 +45,7 @@
         <el-col :xs="24" :sm="12">
           <el-card class="box-card" style="width: 100%">
             <div slot="header" class="clearfix">
-              <h3>Signup</h3>
+              <h3>新規登録</h3>
             </div>
             <el-form :model="user" :rules="rules" label-position="top" method="post" :action="action">
               <!-- CSRF tokenを挿入 -->
