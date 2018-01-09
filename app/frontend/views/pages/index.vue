@@ -10,7 +10,9 @@
       errors: Array,
       sign_in: String,
       sign_up: String,
-      logged_in: Boolean
+      sign_out: String,
+      edit: String,
+      logged_in: Boolean,
     },
   }
 </script>
@@ -26,23 +28,45 @@
               <div slot="header" class="clearfix">
                 <h3>PokeBattleManager ver.2</h3>
               </div>
-              <el-form method="get" :action="sign_in">
-                <!-- CSRF tokenを挿入 -->
-                <csrf></csrf>
 
-                <el-form-item>
-                  <el-button native-type="submit" type="primary" class="m-t-10">
-                    ログイン
+              <template v-if="logged_in">
+                <el-form method="get" :action="edit">
+                  <csrf></csrf>
+                  <el-form-item>
+                    <el-button native-type="submit" type="primary" class="m-t-10">
+                      アカウントの編集
+                    </el-button>
+                  </el-form-item>
+                </el-form>
+
+                <el-form method="post" :action="sign_out">
+                  <input type="hidden" name="_method" value="delete">
+                  <csrf></csrf>
+                  <el-button native-type="submit" type="warning" class="m-t-10">
+                    ログアウト
                   </el-button>
-                </el-form-item>
-              </el-form>
+                </el-form>
+              </template>
 
-              もしくは
-              <a :href="sign_up">
-                <el-button type="text" style="margin-left: 10px">
-                  新規登録
-                </el-button>
-              </a>
+              <template v-else>
+                <el-form method="get" :action="sign_in">
+                  <!-- CSRF tokenを挿入 -->
+                  <csrf></csrf>
+
+                  <el-form-item>
+                    <el-button native-type="submit" type="primary" class="m-t-10">
+                      ログイン
+                    </el-button>
+                  </el-form-item>
+                </el-form>
+
+                もしくは
+                <a :href="sign_up">
+                  <el-button type="text" style="margin-left: 10px">
+                    新規登録
+                  </el-button>
+                </a>
+              </template>
 
             </el-card>
           </el-col>
