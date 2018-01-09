@@ -2,8 +2,8 @@
   import CSRF from 'components/shared/csrf.vue';
   import changeBackgroundImage from 'components/shared/changeBackgroundImage.vue';
   export default {
-    // templateで使うcomponentを登録（/app/frontend/components/以下に置いておく共通部品を登録するイメージ）
     mixins: [changeBackgroundImage],
+    // templateで使うcomponentを登録（/app/frontend/components/以下に置いておく共通部品を登録するイメージ）
     components: {
       csrf: CSRF
     },
@@ -93,10 +93,6 @@
 
 <style scoped>
   /*このコンポーネントにだけ適応されるCSS*/
-  .background {
-    height: 100%;
-    background-color: rgba(255,255,255,0.7);
-  }
 </style>
 
 <style src="../../../stylesheets/devise/common.scss"></style>
