@@ -2,10 +2,10 @@
   import CSRF from 'components/shared/csrf.vue';
   import changeBackgroundImage from 'components/shared/changeBackgroundImage.vue';
   export default {
-    mixins: [changeBackgroundImage],
     // templateで使うcomponentを登録（/app/frontend/components/以下に置いておく共通部品を登録するイメージ）
     components: {
-      csrf: CSRF
+      csrf: CSRF,
+      background: changeBackgroundImage,
     },
     // propsはこのcomponentを呼び出すときに渡される変数を解釈するための記述
     props: {
@@ -29,7 +29,7 @@
 <template>
   <!-- this div is the top level container where -->
   <div class="">
-    <div class="background">
+    <background>
       <!-- railsから渡ってくるerrorをここで処理する -->
       <el-alert v-for="error in errors"
                 :key="error"
@@ -65,7 +65,7 @@
           </el-row>
         </el-main>
       </el-container>
-    </div>
+    </background>
   </div>
 </template>
 
