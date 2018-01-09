@@ -1,4 +1,8 @@
-h1 Pages#index
-p Find me in app/views/pages/index.html.slim
-- if user_signed_in?
-  p logged in!
+#pages-index-view
+  pages-index-view(
+    :sign_in="'#{new_user_session_path}'"
+    :sign_up="'#{new_user_registration_path}'"
+    )
+
+= javascript_pack_tag 'pages/index'
+= stylesheet_pack_tag 'pages/index'
