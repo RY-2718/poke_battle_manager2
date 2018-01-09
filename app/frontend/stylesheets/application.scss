@@ -1,4 +1,8 @@
-$bgColor: #E2F4FA;
-html, body {
-    background: $bgColor;
+@import "normalize.css/normalize.css";
+
+body {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
