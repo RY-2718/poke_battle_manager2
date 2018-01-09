@@ -6,3 +6,16 @@
     }
   }
 </script>
+
+<template>
+  <div>
+    <slot></slot>
+  </div>
+</template>
+
+<style scoped type="text/scss">
+  div {
+    height: 100%;
+    background-color: rgba(255,255,255,0.5);
+  }
+</style>
