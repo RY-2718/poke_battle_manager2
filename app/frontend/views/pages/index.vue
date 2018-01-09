@@ -31,7 +31,6 @@
 
               <template v-if="logged_in">
                 <el-form method="get" :action="edit">
-                  <csrf></csrf>
                   <el-form-item>
                     <el-button native-type="submit" type="primary" class="m-t-10">
                       アカウントの編集
@@ -50,9 +49,6 @@
 
               <template v-else>
                 <el-form method="get" :action="sign_in">
-                  <!-- CSRF tokenを挿入 -->
-                  <csrf></csrf>
-
                   <el-form-item>
                     <el-button native-type="submit" type="primary" class="m-t-10">
                       ログイン
