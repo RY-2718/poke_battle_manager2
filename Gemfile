@@ -53,3 +53,7 @@ gem 'slim-rails'
 
 # User authorization
 gem 'devise'
+
+# Active Record like data processing for static data
+gem 'active_hash'
+gem 'active_hash-like'
