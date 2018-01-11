@@ -2,13 +2,14 @@ require 'test_helper'
 
 class BattleTest < ActiveSupport::TestCase
   def setup
-    @battle = Battle.new(my_rate: 1500, opp_rate: 1500, result: true)
-    3.times do |i|
-      @battle.my_pokes.build(id: i, name: PokeData.find(i).name)
-      @battle.opp_pokes.build(id: i, name: PokeData.find(i).name)
-      @battle.battle_my_pokes.build(my_poke_id: i)
-      @battle.battle_opp_pokes.build(opp_poke_id: i)
-    end
+    @user = users(:alice)
+    @battle = @user.battles.create(my_rate: 1500, opp_rate: 1500, result: true)
+    @battle.my_pokes << my_pokes(:pikachu)
+    @battle.my_pokes << my_pokes(:garchomp)
+    @battle.my_pokes << my_pokes(:charizard)
+    @battle.opp_pokes.create(name: "フシギダネ")
+    @battle.opp_pokes.create(name: "フシギソウ")
+    @battle.opp_pokes.create(name: "フシギバナ")
   end
 
   test "should be valid" do

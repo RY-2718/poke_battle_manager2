@@ -1,0 +1,11 @@
+pikachu:
+    name: "ピカチュウ"
+    user: alice
+
+garchomp:
+    name: "ガブリアス"
+    user: alice
+
+charizard:
+    name: "リザードン"
+    user: alice
