@@ -2,7 +2,8 @@ require 'test_helper'
 
 class MyPokeTest < ActiveSupport::TestCase
   def setup
-    @my_poke = MyPoke.new(name: PokeData.find(0).name, item: "きあいのタスキ", ability: "しんりょく")
+    @user = users(:alice)
+    @my_poke = @user.my_pokes.new(name: "フシギダネ", item: "きあいのタスキ", ability: "しんりょく")
   end
 
   test "should be valid" do
