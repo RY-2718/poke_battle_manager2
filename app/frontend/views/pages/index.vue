@@ -78,6 +78,11 @@
   margin-top: 150px;
   background-color: rgba(255,255,255,0.5);
 }
+@media screen and (max-width: 767px ) {
+  .box-card {
+    background-color: rgba(255,255,255,0.85);
+  }
+}
 </style>
 
 <style>
