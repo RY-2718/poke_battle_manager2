@@ -27,3 +27,5 @@
 
 # Ignore image files
 /app/frontend/images/
+
+.idea/
