@@ -1,5 +1,5 @@
 User.create!([
-  {email: "alice@test.com", username: "ありす", password: "pokemon", password_confirmation: "pokemon"}
+  {email: "alice@example.com", username: "ありす", password: "pokemon", password_confirmation: "pokemon"}
 ])
 Battle.create!([
   {my_rate: 1500, opp_rate: 1475, result: false, user_id: 1},
