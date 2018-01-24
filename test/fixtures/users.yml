@@ -6,10 +6,10 @@
 #
 alice:
   username: ありす
-  email: alice@test.com
+  email: alice@example.com
   encrypted_password: <%= Devise::Encryptor.digest(User, 'password') %>
 
 bob:
   username: いのうえ
-  email: bob@inoue.com
+  email: bob@example.com
   encrypted_password: <%= Devise::Encryptor.digest(User, 'password') %>
