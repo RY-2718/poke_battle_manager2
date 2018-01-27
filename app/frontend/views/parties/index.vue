@@ -21,7 +21,6 @@
     },
     methods: {
       handleClick(tab, event) {
-        return;
       }
     },
     mounted() {
@@ -59,7 +58,7 @@
         <el-tabs v-model="activeTab" @tab-click="handleClick">
           <el-tab-pane label="追加・編集" name="pokes">
             <el-row :gutter="20" style="width: 80%;">
-              <el-col :xs="24" :sm="8" v-for="poke in pokes" :keys="id">
+              <el-col :xs="24" :sm="8" v-for="poke in pokes" :key="id">
                 <el-card style="width: 100%;">
                   <div slot="header">
                     <h5>{{poke.nickname}} - {{poke.poke_name}}</h5>
