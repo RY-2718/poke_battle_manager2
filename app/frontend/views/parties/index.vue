@@ -1,12 +1,12 @@
 <script>
   import CSRF from 'components/shared/csrf.vue';
-  import ElCard from "element-ui/packages/card/src/main";
   import axios from "axios";
+  import PokeCard from "../../components/parties/pokeCard"
   export default {
     // templateで使うcomponentを登録（/app/frontend/components/以下に置いておく共通部品を登録するイメージ）
     components: {
-      ElCard,
-      csrf: CSRF
+      csrf: CSRF,
+      "poke-card": PokeCard
     },
     // propsはこのcomponentを呼び出すときに渡される変数を解釈するための記述
     props: {
@@ -59,12 +59,7 @@
           <el-tab-pane label="追加・編集" name="pokes">
             <el-row :gutter="20" style="width: 80%;">
               <el-col :xs="24" :sm="8" v-for="poke in pokes" :key="id">
-                <el-card style="width: 100%;">
-                  <div slot="header">
-                    <h5>{{poke.nickname}} - {{poke.poke_name}}</h5>
-                  </div>
-                  がぞう
-                </el-card>
+                <poke-card :poke="poke"></poke-card>
               </el-col>
             </el-row>
           </el-tab-pane>
