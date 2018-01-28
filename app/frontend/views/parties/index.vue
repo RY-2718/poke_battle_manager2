@@ -58,7 +58,7 @@
         <el-tabs v-model="activeTab" @tab-click="handleClick">
           <el-tab-pane label="追加・編集" name="pokes">
             <el-row :gutter="20" style="width: 80%;">
-              <el-col :xs="24" :sm="8" v-for="poke in pokes" :key="id">
+              <el-col :xs="24" :sm="8" v-for="poke in pokes" :key="poke.id">
                 <poke-card :poke="poke"></poke-card>
               </el-col>
             </el-row>
