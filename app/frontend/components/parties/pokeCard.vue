@@ -14,7 +14,7 @@
   <div>
     <el-card class="el-card">
       <div slot="header">
-        <h5>{{poke.nickname}} - {{poke.poke_name}}</h5>
+        <h5>{{ poke.nickname }} - {{ poke.poke_name }}</h5>
       </div>
       <el-row>
         <el-col :span="12">
