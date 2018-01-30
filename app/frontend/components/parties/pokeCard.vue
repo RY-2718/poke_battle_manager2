@@ -1,8 +1,12 @@
 <script>
   import ElCard from "element-ui/packages/card/src/main";
+  import PokeIcon from "../shared/pokeIcon"
+  import PokeImage from "../shared/pokeImage"
   export default {
     components: {
-      ElCard
+      ElCard,
+      PokeIcon,
+      PokeImage
     },
     props: {
       poke: null
@@ -46,7 +50,7 @@
           </table>
         </el-col>
         <el-col :span="12">
-          hogehoge
+          <poke-image :dex="poke.dex" :width="'50%'" class="poke-image"></poke-image>
         </el-col>
       </el-row>
     </el-card>
@@ -60,5 +64,9 @@
   }
   th {
     text-align: right;
+  }
+  .poke-image {
+    text-align: right;
+    margin-right: 10%;
   }
 </style>

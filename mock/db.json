@@ -2,6 +2,7 @@
   "pokes": [
     {
       "id": 1,
+      "dex": "445",
       "nickname": "ガブ",
       "poke_name": "ガブリアス",
       "stat": {
@@ -32,6 +33,7 @@
     },
     {
       "id": 2,
+      "dex": "445",
       "nickname": "ガブ",
       "poke_name": "ガブリアス",
       "stat": {
@@ -62,6 +64,7 @@
     },
     {
       "id": 3,
+      "dex": "445",
       "nickname": "ガブ",
       "poke_name": "ガブリアス",
       "stat": {
@@ -92,6 +95,7 @@
     },
     {
       "id": 4,
+      "dex": "445",
       "nickname": "ガブ",
       "poke_name": "ガブリアス",
       "stat": {
@@ -122,6 +126,7 @@
     },
     {
       "id": 5,
+      "dex": "445",
       "nickname": "ガブ",
       "poke_name": "ガブリアス",
       "stat": {
@@ -152,6 +157,7 @@
     },
     {
       "id": 6,
+      "dex": "445",
       "nickname": "ガブ",
       "poke_name": "ガブリアス",
       "stat": {
