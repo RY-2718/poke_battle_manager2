@@ -25,23 +25,23 @@
             </tr>
             <tr>
               <th>こうげき</th>
-              <td>{{ poke.stat.h }}</td>
+              <td>{{ poke.stat.a }}</td>
             </tr>
             <tr>
               <th>ぼうぎょ</th>
-              <td>{{ poke.stat.h }}</td>
+              <td>{{ poke.stat.b }}</td>
             </tr>
             <tr>
               <th>とくこう</th>
-              <td>{{ poke.stat.h }}</td>
+              <td>{{ poke.stat.c }}</td>
             </tr>
             <tr>
               <th>とくぼう</th>
-              <td>{{ poke.stat.h }}</td>
+              <td>{{ poke.stat.d }}</td>
             </tr>
             <tr>
               <th>すばやさ</th>
-              <td>{{ poke.stat.h }}</td>
+              <td>{{ poke.stat.s }}</td>
             </tr>
           </table>
         </el-col>
