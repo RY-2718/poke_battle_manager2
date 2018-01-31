@@ -58,12 +58,12 @@
 </template>
 
 <style scoped>
+  th {
+    text-align: right;
+  }
   .el-card {
     margin-bottom: 20px;
     width: 100%;
-  }
-  th {
-    text-align: right;
   }
   .poke-image {
     text-align: right;
