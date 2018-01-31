@@ -39,7 +39,7 @@
   <div class="">
     <el-container class="bg-light" style="height: 100vh;">
       <el-aside>
-        <el-menu>
+        <el-menu class="el-menu">
           <el-menu-item index="1">
             <a href="/parties">Party</a>
           </el-menu-item>
@@ -57,11 +57,11 @@
       <el-main>
         <el-tabs v-model="activeTab" @tab-click="handleClick">
           <el-tab-pane label="追加・編集" name="pokes">
-            <el-row :gutter="20" style="width: 80%;">
-              <el-col :xs="24" :sm="8" v-for="poke in pokes" :key="poke.id">
-                <poke-card :poke="poke"></poke-card>
-              </el-col>
-            </el-row>
+            <div class="flex-parent">
+              <div class="flex-children" v-for="poke in pokes" :key="poke.id">
+                <poke-card :poke="poke" class="poke-card"></poke-card>
+              </div>
+            </div>
           </el-tab-pane>
           <el-tab-pane label="パーティ" name="party">
             party
@@ -76,6 +76,22 @@
   /*このコンポーネントにだけ適応されるCSS*/
   .el-menu {
     min-height: 100%;
+  }
+  .poke-card {
+    margin-right: 20px;
+  }
+  .flex-parent {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .flex-children {
+    min-width: 400px;
+    max-width: 490px;
+  }
+  @media screen and (max-width: 700px) {
+    .flex-parent {
+      flex-direction: column;
+    }
   }
 </style>
 

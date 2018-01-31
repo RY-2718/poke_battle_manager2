@@ -16,3 +16,11 @@ body {
 * {
   margin: 0;
 }
+
+.flex-parent {
+  display: flex;
+  align-items: flex-end;
+}
+.flex-children {
+  flex: 1;
+}
