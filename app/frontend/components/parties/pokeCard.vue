@@ -108,7 +108,7 @@
   }
   .el-card {
     margin-bottom: 20px;
-    width: 480px;
+    width: 100%;
     background: -webkit-linear-gradient(-20deg, $bg_color 30%, $gradient_color);
     background: linear-gradient(-20deg, $bg_color 30%, $gradient_color);
   }
@@ -142,7 +142,7 @@
     text-align: right;
   }
   #stats-table {
-    flex: 1.7;
+    flex: 1.3;
   }
   #icon_and_moves {
     flex: 1;
