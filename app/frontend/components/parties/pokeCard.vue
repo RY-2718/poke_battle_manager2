@@ -108,7 +108,7 @@
   }
   .el-card {
     margin-bottom: 20px;
-    width: 100%;
+    width: 500px;
     background: -webkit-linear-gradient(-20deg, $bg_color 30%, $gradient_color);
     background: linear-gradient(-20deg, $bg_color 30%, $gradient_color);
   }
