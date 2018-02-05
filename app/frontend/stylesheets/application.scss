@@ -1,4 +1,4 @@
-@import "normalize.css/normalize.css";
+@import "~normalize.css/normalize";
 
 html {
     overflow: hidden;
@@ -6,9 +6,9 @@ html {
 }
 
 body {
+  background-attachment: fixed;
   background-position: center center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
   background-size: cover;
   overflow: hidden;
 }
@@ -18,8 +18,8 @@ body {
 }
 
 .flex-parent {
-  display: flex;
   align-items: flex-end;
+  display: flex;
 }
 .flex-children {
   flex: 1;

@@ -77,15 +77,15 @@
   .el-menu {
     min-height: 100%;
   }
-  .poke-card {
-    margin-right: 20px;
-  }
   .flex-parent {
     justify-content: center;
     flex-wrap: wrap;
   }
   .flex-children {
     width: 550px;
+  }
+  .poke-card {
+    margin-right: 20px;
   }
   @media screen and (max-width: 700px) {
     .flex-parent {

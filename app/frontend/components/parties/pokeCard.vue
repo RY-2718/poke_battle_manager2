@@ -83,9 +83,10 @@
 </template>
 
 <style scoped lang="scss">
-  $gradient_color: #DAF2C9;
   $bg_color: #FFFFFF;
+  $gradient_color: #DAF2C9;
   $theme_color: #409EFF;
+
   tr {
     line-height: 1.3;
   }
@@ -97,17 +98,17 @@
     padding-left: 1em;
   }
   ul, ol {
-    padding-left: 0.5em;
     list-style-type: none!important;/*ポチ消す*/
+    padding-left: 0.5em;
   }
   ul li, ol li {
-    white-space: nowrap;
-    line-height: 1.2;
     border-left: solid 4px $theme_color;/*左側の線*/
-    padding-top: 0.1em;
-    padding-bottom: 0.1em;
+    line-height: 1.2;
     margin-top: 0.2em;
     margin-bottom: 0.2em;
+    padding-top: 0.1em;
+    padding-bottom: 0.1em;
+    white-space: nowrap;
   }
   ul li:last-of-type{
     margin-bottom: 0px;
@@ -120,45 +121,45 @@
     width: 3em;
   }
   .el-card {
+    background: linear-gradient(-20deg, $bg_color 30%, $gradient_color);
+    background: -webkit-linear-gradient(-20deg, $bg_color 30%, $gradient_color);
     margin-bottom: 20px;
     width: 500px;
-    background: -webkit-linear-gradient(-20deg, $bg_color 30%, $gradient_color);
-    background: linear-gradient(-20deg, $bg_color 30%, $gradient_color);
   }
   .margin-bottom {
     margin-bottom: 0.5em;
   }
   .note {
-    position: relative;
     background: #fff0cd;
     box-shadow: 0px 0px 0px 5px #fff0cd;
     border: dashed 2px white;
-    padding-top: 0.5em;
-    padding-bottom: 0.2em;
-    padding-left: 0.5em;
-    padding-right: 0.6em;
     color: #454545;
     display: inline-block;
     margin-top: 10px;
     margin-right: auto;
+    padding-top: 0.5em;
+    padding-bottom: 0.2em;
+    padding-left: 0.5em;
+    padding-right: 0.6em;
+    position: relative;
   }
   .note :after{
-    position: absolute;
-    content: '';
-    right: -7px;
-    top: -7px;
     border-width: 0 15px 15px 0;
     border-style: solid;
     border-color: #ffdb88 #fff #ffdb88;
     box-shadow: -1px 1px 1px rgba(255, 255, 255, 0.15);
+    content: '';
+    position: absolute;
+    right: -7px;
+    top: -7px;
   }
   .poke-image {
     text-align: right;
   }
-  #stats-table {
-    flex: 1.3;
-  }
   #icon_and_moves {
     flex: 1;
+  }
+  #stats-table {
+    flex: 1.3;
   }
 </style>
