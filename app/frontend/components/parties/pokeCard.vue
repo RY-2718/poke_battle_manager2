@@ -67,10 +67,16 @@
           </div>
         </div>
       </div>
-      <div class="note">
-        <padding head="個体値" :v="poke.iv"></padding>
-        <padding head="努力値" :v="poke.ev" class="margin-bottom"></padding>
-        <p><b>　備考</b>: {{ poke.memo }}</p>
+      <div class="flex-parent">
+        <div class="note">
+          <padding head="個体値" :v="poke.iv"></padding>
+          <padding head="努力値" :v="poke.ev" class="margin-bottom"></padding>
+          <p><b>　備考</b>: {{ poke.memo }}</p>
+        </div>
+        <div class="buttons">
+          <el-button type="primary" icon="el-icon-edit" class="button"></el-button>
+          <el-button type="warning" icon="el-icon-delete" class="button"></el-button>
+        </div>
       </div>
     </el-card>
   </div>
@@ -106,6 +112,13 @@
   ul li:last-of-type{
     margin-bottom: 0px;
   }
+  .button {
+    margin-left: 2px;
+    margin-right: 2px;
+    padding-left: 12px;
+    padding-right: 18px;
+    width: 3em;
+  }
   .el-card {
     margin-bottom: 20px;
     width: 500px;
@@ -127,6 +140,7 @@
     color: #454545;
     display: inline-block;
     margin-top: 10px;
+    margin-right: auto;
   }
   .note :after{
     position: absolute;

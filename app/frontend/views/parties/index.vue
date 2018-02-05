@@ -85,7 +85,7 @@
     flex-wrap: wrap;
   }
   .flex-children {
-    width: 500px;
+    width: 550px;
   }
   @media screen and (max-width: 700px) {
     .flex-parent {
