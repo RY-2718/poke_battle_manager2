@@ -116,8 +116,7 @@
   .button {
     margin-left: 2px;
     margin-right: 2px;
-    padding-left: 12px;
-    padding-right: 18px;
+    padding: 6px 18px 6px 12px;
     width: 3em;
   }
   .el-card {
