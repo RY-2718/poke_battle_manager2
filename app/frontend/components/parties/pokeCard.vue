@@ -8,11 +8,21 @@
       ElCard,
       PokeIcon,
       PokeImage,
-      Padding
+      Padding,
     },
     props: {
       poke: null
     },
+    data() {
+      return {
+        form_visible: false
+      };
+    },
+    methods: {
+      onSubmit(poke) {
+        console.log('submit!' + poke);
+      }
+    }
   }
 </script>
 
@@ -74,11 +84,84 @@
           <p><b>　備考</b>: {{ poke.memo }}</p>
         </div>
         <div class="buttons">
-          <el-button type="primary" icon="el-icon-edit" class="button"></el-button>
+          <el-button type="primary" icon="el-icon-edit" @click="form_visible = true" class="button"></el-button>
+
           <el-button type="warning" icon="el-icon-delete" class="button"></el-button>
         </div>
       </div>
     </el-card>
+
+    <!--編集用のモーダルダイアログ-->
+    <el-dialog :visible.sync="form_visible" title="編集" top="3vh">
+      <el-form :model="poke" size="mini">
+        <el-form-item label="ポケモン">
+          <el-input v-model="poke.poke_name"></el-input>
+        </el-form-item>
+        <el-form-item label="ニックネーム">
+          <el-input v-model="poke.nickname"></el-input>
+        </el-form-item>
+        <el-form-item label="せいかく">
+          <el-input v-model="poke.nature"></el-input>
+        </el-form-item>
+        <el-form-item label="とくせい">
+          <el-input v-model="poke.ability"></el-input>
+        </el-form-item>
+        <el-form-item
+            v-for="(move, index) in poke.moves"
+            :label="'わざ' + (index+1)"
+            :key="index"
+        >
+          <el-input v-model="move.txt"></el-input>
+        </el-form-item>
+        <el-form-item label="個体値">
+          <el-col :xs="24" :lg="3">
+            <el-input-number v-model="poke.iv.h" controls-position="right" class="form-input-number"></el-input-number>
+          </el-col>
+          <el-col :xs="24" :lg="3">
+            <el-input-number v-model="poke.iv.a" controls-position="right" class="form-input-number"></el-input-number>
+          </el-col>
+          <el-col :xs="24" :lg="3">
+            <el-input-number v-model="poke.iv.b" controls-position="right" class="form-input-number"></el-input-number>
+          </el-col>
+          <el-col :xs="24" :lg="3">
+            <el-input-number v-model="poke.iv.c" controls-position="right" class="form-input-number"></el-input-number>
+          </el-col>
+          <el-col :xs="24" :lg="3">
+            <el-input-number v-model="poke.iv.d" controls-position="right" class="form-input-number"></el-input-number>
+          </el-col>
+          <el-col :xs="24" :lg="3">
+            <el-input-number v-model="poke.iv.s" controls-position="right" class="form-input-number"></el-input-number>
+          </el-col>
+        </el-form-item>
+        <el-form-item label="努力値">
+          <el-col :xs="24" :lg="3">
+            <el-input-number v-model="poke.ev.h" controls-position="right" class="form-input-number"></el-input-number>
+          </el-col>
+          <el-col :xs="24" :lg="3">
+            <el-input-number v-model="poke.ev.a" controls-position="right" class="form-input-number"></el-input-number>
+          </el-col>
+          <el-col :xs="24" :lg="3">
+            <el-input-number v-model="poke.ev.b" controls-position="right" class="form-input-number"></el-input-number>
+          </el-col>
+          <el-col :xs="24" :lg="3">
+            <el-input-number v-model="poke.ev.c" controls-position="right" class="form-input-number"></el-input-number>
+          </el-col>
+          <el-col :xs="24" :lg="3">
+            <el-input-number v-model="poke.ev.d" controls-position="right" class="form-input-number"></el-input-number>
+          </el-col>
+          <el-col :xs="24" :lg="3">
+            <el-input-number v-model="poke.ev.s" controls-position="right" class="form-input-number"></el-input-number>
+          </el-col>
+        </el-form-item>
+        <el-form-item label="メモ">
+          <el-input type="textarea" v-form="poke.memo"></el-input>
+        </el-form-item>
+        <el-form-item>
+          <el-button type="primary" @click="onSubmit(poke)">更新</el-button>
+          <el-button @click="form_visible = false">キャンセル</el-button>
+        </el-form-item>
+      </el-form>
+    </el-dialog>
   </div>
 </template>
 
@@ -124,6 +207,9 @@
     background: -webkit-linear-gradient(-20deg, $bg_color 30%, $gradient_color);
     margin-bottom: 20px;
     width: 500px;
+  }
+  .form-input-number {
+    width: 100px;
   }
   .margin-bottom {
     margin-bottom: 0.5em;
